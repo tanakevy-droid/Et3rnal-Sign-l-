@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eternal Signal eBooks</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#0f0f0f;
+    color:white;
+}
+
+header{
+    background:linear-gradient(135deg,#111,#222);
+    padding:20px;
+    text-align:center;
+}
+
+.logo{
+    font-size:2rem;
+    color:gold;
+    font-weight:bold;
+}
+
+nav{
+    margin-top:15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+}
+
+.hero{
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h1{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    color:#ccc;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:gold;
+    color:black;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+.books{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    padding:40px;
+}
+
+.book{
+    background:#1b1b1b;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+    transition:.3s;
+}
+
+.book:hover{
+    transform:translateY(-5px);
+}
+
+.book img{
+    width:100%;
+    border-radius:8px;
+}
+
+.book h3{
+    margin:15px 0;
+}
+
+.book p{
+    color:#bbb;
+}
+
+.price{
+    color:gold;
+    font-size:1.3rem;
+    margin:15px 0;
+}
+
+.about{
+    padding:60px 20px;
+    text-align:center;
+    background:#161616;
+}
+
+.contact{
+    padding:60px 20px;
+    text-align:center;
+}
+
+input, textarea{
+    width:100%;
+    max-width:500px;
+    padding:12px;
+    margin:10px;
+    border:none;
+    border-radius:5px;
+}
+
+button{
+    padding:12px 25px;
+    background:gold;
+    border:none;
+    border-radius:5px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#111;
+    color:#888;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">ETERNAL SIGNAL</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#books">eBooks</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <h1>Transform Your Life Through Knowledge</h1>
+    <p>
+        Discover powerful eBooks on faith, motivation,
+        success, trading, and personal growth.
+    </p>
+
+    <a href="#books" class="btn">View eBooks</a>
+</section>
+
+<section class="books" id="books">
+
+    <div class="book">
+        <img src="Images/sacred-echo.jpg" alt="ebook">
+        <h3>Sacred Echo</h3>
+        <p>Voices beyond the surface.</p>
+        <div class="price"></div>
+        <a href="Sacred Echo.pdf" class="btn">Chapter 1-2 free</a>
+    </div>
+
+    <div class="book">
+        <img src="https://via.placeholder.com/300x400" alt="ebook">
+        <h3>Faith & Purpose</h3>
+        <p>Grow spiritually and find direction.</p>
+        <div class="price">R79</div>
+        <a href="ebook2.pdf" class="btn">Download</a>
+    </div>
+
+    <div class="book">
+        <img src="https://via.placeholder.com/300x400" alt="ebook">
+        <h3>Success Blueprint</h3>
+        <p>Build habits that create success.</p>
+        <div class="price">R89</div>
+        <a href="ebook3.pdf" class="btn">Download</a>
+    </div>
+
+</section>
+
+<section class="about" id="about">
+    <h2>About Eternal Signal</h2>
+    <br>
+    <p>
+        Eternal Signal is dedicated to creating
+        inspiring digital content that helps people
+        grow spiritually, financially, and personally.
+    </p>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <br>
+
+    <form id="contactForm">
+        <input type="text" placeholder="Your Name" required>
+        <br>
+        <input type="email" placeholder="Your Email" required>
+        <br>
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <br>
+        <button type="submit">Send Message</button>
+    </form>
+
+    <p id="message"></p>
+</section>
+
+<footer>
+    © 2026 Eternal Signal. All Rights Reserved.
+</footer>
+
+<script>
+document.getElementById("contactForm")
+.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    document.getElementById("message")
+    .innerHTML =
+    "✅ Thank you! Your message has been received.";
+
+    this.reset();
+});
+</script>
+
+</body>
+</html>
