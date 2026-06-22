@@ -8,14 +8,8 @@ header {
   align-items: center;
   z-index: 1000;
 }
-
 .logo {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-  border-radius: 12px;
-}
-.logo {
-  width: 80px;
-  height: auto;
+    width: 60px;
+    height: auto;
+    display: block;
 }
